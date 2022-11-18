@@ -1,0 +1,12 @@
+/coverage
+/demo/dist
+/es
+/lib
+/node_modules
+/umd
+npm-debug.log*
+.vscode
+cypress/screenshots
+cypress/downloads
+.DS_Store
+bundle-analysis.html
