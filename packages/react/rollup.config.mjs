@@ -1,8 +1,8 @@
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
-import typescript from "@rollup/plugin-typescript";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import terser from '@rollup/plugin-terser';
+import typescript from "rollup-plugin-typescript2";
 
 import pkg from './package.json' assert { type: 'json' };
 
@@ -21,12 +21,15 @@ export default [
         sourcemap: true,
       },
     ],
+    external: ["react"],
     plugins: [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        useTsconfigDeclarationDir: true,
+      }),
       terser(),
     ],
-  }
+  },
 ];

@@ -35,14 +35,14 @@ function processStyle(svg: string) {
     return '';
   })
 
-  // replace colors with props
+  // replace colors with props, soft is the original color to be replaced
   const svgColorsReplaced = svgStyleReplaced
-    .replaceAll(colors.primary, "${primary}")
-    .replaceAll(colors.secondary, "${secondary}")
-    .replaceAll(colors.border, "${border}")
+    .replaceAll(colors.soft.primary, "${primary ? primary : colors[theme].primary}")
+    .replaceAll(colors.soft.secondary, "${secondary ? secondary : colors[theme].secondary}")
+    .replaceAll(colors.soft.border, "${border ? border : colors[theme].border}")
     .replaceAll("class", "className")
     .replaceAll("strokeWidth:`1.5px`", "strokeWidth:`${stroke}`")
-    .replace("<svg", "<svg className={className} height={size} width={size}")
+    .replace("<svg", "<svg onClick={onClick} className={className} height={size} width={size}")
 
   // replace stroke
   const svgStrokeReplaced = svgColorsReplaced.replaceAll(/strokeWidth:(.*px`)/g, function(a, b) {
@@ -58,15 +58,17 @@ export default (name: string, content: string): string => {
   const str = `
   import React from 'react';
 
-  import { IconProps } from '../util';
+  import { colors, IconProps } from '../../util';
 
   export default ({
+    theme = 'default',
 		size = '${ICON_SIZE}',
-    primary = "${colors.primary}",
-    secondary = "${colors.secondary}",
-    border = "${colors.border}",
+    primary,
+    secondary,
+    border,
     stroke = "${STROKE_SIZE}",
     className = "",
+    onClick,
 	}: IconProps) => (
 		${processStyle(content)}
 	);

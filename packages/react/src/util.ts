@@ -1,4 +1,4 @@
-export let colors = {
+export let colors: Record<string, {primary: string, secondary: string, border: string}> = {
   default: {
     primary: '#ffffff',
     secondary: '#b0acb0',
