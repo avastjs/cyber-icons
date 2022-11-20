@@ -1,2 +1,2 @@
 export * from './map';
-export { IconProps } from "./util";
+export * from "./util";
