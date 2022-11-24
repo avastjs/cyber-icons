@@ -1,0 +1,18 @@
+
+  import React from 'react';
+
+  import { colors, IconProps } from '../../util';
+
+  export default ({
+    theme = 'default',
+		size = '24px',
+    primary,
+    secondary,
+    border,
+    stroke = "1px",
+    className = "",
+    onClick,
+	}: IconProps) => (
+		<svg onClick={onClick} className={className} height={size} width={size} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs></defs><g id="preferences-system"><polygon style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} points="62 8 62 56 56 62 47 62 41 56 23 56 17 62 8 62 2 56 2 8 8 2 14 2 20 8 44 8 50 2 56 2 62 8"/><polygon style={{fill:`${primary ? primary : colors[theme].primary}`}} points="47.83 60 41.83 54 22.17 54 16.17 60 8.83 60 4 55.17 4 8.83 8.83 4 13.17 4 19.17 10 44.83 10 50.83 4 55.17 4 60 8.83 60 55.17 55.17 60 47.83 60"/><line style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} x1="41" y1="56" x2="23" y2="56"/><line style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} x1="21" y1="62" x2="43" y2="62"/><line style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} x1="25" y1="59" x2="39" y2="59"/><polygon style={{fill:`${secondary ? secondary : colors[theme].secondary}`}} points="44 2 41 5 23 5 20 2 44 2"/><polygon style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} points="44 2 41 5 23 5 20 2 44 2"/><line style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} x1="20" y1="2" x2="14" y2="2"/><line style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} x1="44" y1="2" x2="50" y2="2"/><circle style={{fill:`${secondary ? secondary : colors[theme].secondary}`}} cx="40.61" cy="37" r="5"/><path style={{fill:`${secondary ? secondary : colors[theme].secondary}`}} d="M49.37,39.1,52,41.27l-2,3.46-3.21-1.2a8.9,8.9,0,0,1-3.62,2.1L42.61,49h-4l-.56-3.37a8.9,8.9,0,0,1-3.62-2.1l-3.21,1.2-1-1.73-1-1.73,2.63-2.17a9.31,9.31,0,0,1,0-4.2l-2.63-2.17,2-3.46,3.21,1.2a8.9,8.9,0,0,1,3.62-2.1L38.61,25h4l.56,3.37A8.89,8.89,0,0,1,46,29.8a8.47,8.47,0,0,1,.79.67L50,29.27l2,3.46L49.37,34.9a9.31,9.31,0,0,1,0,4.2Z"/><circle style={{fill:`${primary ? primary : colors[theme].primary}`}} cx="40.61" cy="37" r="5"/><circle style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} cx="40.61" cy="37" r="5"/><path style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} d="M49.37,39.1,52,41.27l-2,3.46-3.21-1.2a8.9,8.9,0,0,1-3.62,2.1L42.61,49h-4l-.56-3.37a8.9,8.9,0,0,1-3.62-2.1l-3.21,1.2-1-1.73-1-1.73,2.63-2.17a9.31,9.31,0,0,1,0-4.2l-2.63-2.17,2-3.46,3.21,1.2a8.9,8.9,0,0,1,3.62-2.1L38.61,25h4l.56,3.37A8.89,8.89,0,0,1,46,29.8a8.47,8.47,0,0,1,.79.67L50,29.27l2,3.46L49.37,34.9a9.31,9.31,0,0,1,0,4.2Z"/><path style={{fill:`none`,stroke:`${border ? border : colors[theme].border}`,strokeLinejoin:`bevel`,strokeWidth:`${stroke}`}} d="M46,15V29.8a8.89,8.89,0,0,0-2.83-1.43L42.61,25h-4l-.56,3.37a8.9,8.9,0,0,0-3.62,2.1l-3.21-1.2-2,3.46,2.63,2.17a9.31,9.31,0,0,0,0,4.2l-2.63,2.17,1,1.73H12V15Z"/></g></svg>
+	);
+  

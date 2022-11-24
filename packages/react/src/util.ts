@@ -46,7 +46,7 @@ export let colors: Record<string, {primary: string, secondary: string, border: s
   }
 }
 
-export const categories = ['standard-actions', 'standard-application']
+export const categories = ['standard-actions', 'standard-application', 'standard-categories']
 
 export const ICON_SIZE = '24px'
 
