@@ -15,8 +15,6 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org
 
-      - run: cd packages/react/ 
-      - run: npm ci && npm run build
-      - run: npm publish --access=public
+      - run: cd packages/react/ && npm ci && npm run build && npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
