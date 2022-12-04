@@ -1,4 +1,4 @@
-name: publish-npm
+name: publish-npm-react
 
 on:
   release:
