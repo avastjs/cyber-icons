@@ -26,7 +26,7 @@
   </a>
 </p>
 
-<image width="600px" src="../../ss1.png" />
+<image width="100%" src="../../ss1.png" />
 
 Demo: https://react-cyber-icons-demo.vercel.app/
 
@@ -41,65 +41,40 @@ Demo: https://react-cyber-icons-demo.vercel.app/
 # Install
 
 
-## Vue
+## React
 
-<image width="80px" src="../../vue-min.png" />
+<image width="80px" src="../../react-min.png" />
 
-https://www.npmjs.com/package/@vastjs/cyber-icons-vue
+https://www.npmjs.com/package/@vastjs/cyber-icons-react
 
 npm
 
 ```
-npm install @vastjs/cyber-icons-vue
+npm install @vastjs/cyber-icons-react
 ```
 
 yarn
 
 ```
-yarn add @vastjs/cyber-icons-vue
+yarn add @vastjs/cyber-icons-react
 ```
 
-### Usage Vue3
+### Usage, React / React + TS / Nextjs / etc
 
 ```typescript
-// plugins/CyberIcons.ts
-import { FaceAngel, FaceAngry } from 'cyber-icons-vue';
+// Threeshakable
+import { ApplicationsEngineering } from '@vastjs/cyber-icons-react'
 
-export default {
-  install: (app: any, options: any) => {
-    app.component("FaceAngel", FaceAngel);
-    app.component("FaceAngry", FaceAngry);
-    // other icons...
-  },
-};
+
+export default function Home() {
+
+ return (
+    <div>
+      <ApplicationsEngineering size="42px" />
+    </div>
+}
+
 ```
-
-```javascript
-// your component 
-<template>
-  <FaceAngry />
-</template>
-```
-
-### Usage Nuxt 3 
-
-```typescript
-// plugins/cyber-icons.client.js
-import { FaceAngel } from '@vastjs/cyber-icons-vue';
-
-export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.component("FaceAngel", FaceAngel);
-  // others...
-})
-```
-
-```javascript
-// your component 
-<template>
-  <FaceAngry />
-</template>
-```
-
 
 ## Options
 
@@ -119,7 +94,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   <ApplicationsEngineering theme="spacex" />
 ```
 
-<image width="100%" src="../../themes.png" />
+<image width="600px" src="../../themes.png" />
 
 ### Custom Color
 
