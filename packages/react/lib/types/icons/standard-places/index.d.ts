@@ -1,9 +1,0 @@
-export { default as Folder } from './Folder';
-export { default as FolderRemote } from './FolderRemote';
-export { default as NetworkServer } from './NetworkServer';
-export { default as NetworkWorkgroup } from './NetworkWorkgroup';
-export { default as StartHere } from './StartHere';
-export { default as UserBookmarks } from './UserBookmarks';
-export { default as UserDesktop } from './UserDesktop';
-export { default as UserHome } from './UserHome';
-export { default as UserTrash } from './UserTrash';
