@@ -3,6 +3,7 @@
 <p align="center">
 
 <image width="100px" src="logo.svg" />
+
 +280 Free SVG cyberpunk icons. Contributions, corrections & requests can be made on GitHub.
 
 
