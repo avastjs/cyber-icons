@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:{{primary ? primary : colors[theme].primary}};}.cls-2{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-3{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}</svg:style> </defs><g id="applications-system"><circle class="cls-1" cx="32" cy="32" r="28"/><path class="cls-2" d="M40.76,34.1l2.63,2.17-2,3.46-3.21-1.2a8.9,8.9,0,0,1-3.62,2.1L34,44H30l-.56-3.37a8.9,8.9,0,0,1-3.62-2.1l-3.21,1.2-2-3.46,2.63-2.17a9.31,9.31,0,0,1,0-4.2l-2.63-2.17,2-3.46,3.21,1.2a8.9,8.9,0,0,1,3.62-2.1L30,20h4l.56,3.37a8.9,8.9,0,0,1,3.62,2.1l3.21-1.2,2,3.46L40.76,29.9a9.31,9.31,0,0,1,0,4.2Z"/><circle class="cls-1" cx="32" cy="32" r="5"/><path class="cls-3" d="M40.76,34.1l2.63,2.17-2,3.46-3.21-1.2a8.9,8.9,0,0,1-3.62,2.1L34,44H30l-.56-3.37a8.9,8.9,0,0,1-3.62-2.1l-3.21,1.2-2-3.46,2.63-2.17a9.31,9.31,0,0,1,0-4.2l-2.63-2.17,2-3.46,3.21,1.2a8.9,8.9,0,0,1,3.62-2.1L30,20h4l.56,3.37a8.9,8.9,0,0,1,3.62,2.1l3.21-1.2,2,3.46L40.76,29.9a9.31,9.31,0,0,1,0,4.2Z"/><circle class="cls-3" cx="32" cy="32" r="5"/><circle class="cls-1" cx="7" cy="32" r="2"/><circle class="cls-1" cx="57" cy="32" r="2"/><circle class="cls-1" cx="16.41" cy="23" r="2"/><circle class="cls-1" cx="16.41" cy="41" r="2"/><circle class="cls-1" cx="47.59" cy="41" r="2"/><circle class="cls-1" cx="47.59" cy="23" r="2"/><circle class="cls-3" cx="7" cy="32" r="2"/><circle class="cls-3" cx="57" cy="32" r="2"/><circle class="cls-1" cx="32" cy="57" r="2"/><circle class="cls-1" cx="32" cy="7" r="2"/><circle class="cls-3" cx="32" cy="57" r="2"/><circle class="cls-3" cx="32" cy="7" r="2"/><circle class="cls-3" cx="16.41" cy="23" r="2"/><line class="cls-3" x1="18.14" y1="24" x2="21.61" y2="26"/><circle class="cls-3" cx="16.41" cy="41" r="2"/><line class="cls-3" x1="18.14" y1="40" x2="21.61" y2="38"/><circle class="cls-3" cx="47.59" cy="41" r="2"/><line class="cls-3" x1="45.86" y1="40" x2="42.39" y2="38"/><circle class="cls-3" cx="47.59" cy="23" r="2"/><line class="cls-3" x1="45.86" y1="24" x2="42.39" y2="26"/><circle class="cls-3" cx="32" cy="32" r="30"/><path class="cls-3" d="M7.72,38A25,25,0,0,0,26.05,56.28"/><path class="cls-3" d="M38,7.72A25,25,0,0,1,56.28,26.05"/><path class="cls-3" d="M38,56.28A25,25,0,0,0,56.28,38"/><path class="cls-3" d="M7.72,26.05A25,25,0,0,1,26.05,7.72"/><line class="cls-3" x1="32" y1="20" x2="32" y2="9"/><line class="cls-3" x1="32" y1="44" x2="32" y2="55"/><line class="cls-3" x1="23" y1="32" x2="9" y2="32"/><line class="cls-3" x1="41" y1="32" x2="55" y2="32"/></g></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  

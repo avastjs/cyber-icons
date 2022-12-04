@@ -23,8 +23,6 @@ function processStyle(svg: string, rx = /\.cls-\d\{(.[^\}]*)\}/gm) {
         matchValues = rxValues.exec(match[1]);
       }
 
-      console.log('style:', className[1], match[1])
-
       style = style.substring(0, style.length - 1)
 
       if (classesName[className[1]]) {
@@ -43,7 +41,6 @@ function processStyle(svg: string, rx = /\.cls-\d\{(.[^\}]*)\}/gm) {
   let matchExtra = rxExtra.exec(svgProccessed);
 
   while (matchExtra != null) {
-    console.log('test:', matchExtra[0])
     const className = /\.(cls-\d)/gm.exec(matchExtra[0])
 
     if (className) {
@@ -68,13 +65,10 @@ function processStyle(svg: string, rx = /\.cls-\d\{(.[^\}]*)\}/gm) {
 
   // inject class style
 
-  console.log('classNa', classesName)
   Object.keys(classesName).forEach(key => {
     const styles = classesName[key].join(',')
     svgProccessed = svgProccessed.replaceAll(`class="${key}"`, `style={{${styles}}}`)
   })
-  //
-  //console.log('css process', svgProccessed)
 
   // replace style
   const svgStyleReplaced = svgProccessed.replace(/<style>(.*)<\/style>/g, function(a, b) {
@@ -94,9 +88,8 @@ function processStyle(svg: string, rx = /\.cls-\d\{(.[^\}]*)\}/gm) {
   const svgStrokeReplaced = svgColorsReplaced.replaceAll(/strokeWidth:(.*px`)/g, function(a, b) {
     return 'strokeWidth: `${stroke}`';
   })
-  //console.log('result:', svgColorsReplaced)
 
-  return svgColorsReplaced;
+  return svgStrokeReplaced
 }
 
 

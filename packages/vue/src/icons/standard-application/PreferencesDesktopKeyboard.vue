@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-2{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-3{fill:{{primary ? primary : colors[theme].primary}};}</svg:style> </defs><g id="preferences-desktop-keyboard"><polyline class="cls-1" points="62 36 62 39.66 55.66 46 49 46"/><polyline class="cls-1" points="2 36 2 39.66 8.34 46 15 46"/><polygon class="cls-1" points="49 46 47 49 17 49 15 46 17 43 47 43 49 46"/><polygon class="cls-2" points="18.07 47 17.4 46 18.07 45 45.93 45 46.6 46 45.93 47 18.07 47"/><polygon class="cls-3" points="58 19 58 23 44.53 23 43.53 25 20.47 25 19.47 23 6 23 6 19 21 19 22 21 42 21 43 19 58 19"/><polygon class="cls-2" points="44 17 42 21 22 21 20 17 44 17"/><polygon class="cls-1" points="58 19 58 23 44.53 23 43.53 25 20.47 25 19.47 23 6 23 6 19 21 19 22 21 42 21 43 19 58 19"/><polygon class="cls-1" points="58 23 58 35 54 39 10 39 6 35 6 23 19.47 23 20.47 25 43.53 25 44.53 23 58 23"/><polygon class="cls-3" points="10.83 37 8 34.17 8 25 18.23 25 19.23 27 44.77 27 45.77 25 56 25 56 34.17 53.17 37 10.83 37"/><polygon class="cls-1" points="44 17 42 21 22 21 20 17 44 17"/><polyline class="cls-1" points="54 15 62 15 62 23"/><polyline class="cls-1" points="10 15 2 15 2 23"/><line class="cls-1" x1="24" y1="34" x2="40" y2="34"/><line class="cls-1" x1="9" y1="28" x2="11" y2="28"/><line class="cls-1" x1="13" y1="28" x2="15" y2="28"/><line class="cls-1" x1="17" y1="28" x2="19" y2="28"/><line class="cls-1" x1="21" y1="28" x2="23" y2="28"/><line class="cls-1" x1="25" y1="28" x2="27" y2="28"/><line class="cls-1" x1="29" y1="28" x2="31" y2="28"/><line class="cls-1" x1="33" y1="28" x2="35" y2="28"/><line class="cls-1" x1="37" y1="28" x2="39" y2="28"/><line class="cls-1" x1="41" y1="28" x2="43" y2="28"/><line class="cls-1" x1="45" y1="28" x2="47" y2="28"/><line class="cls-1" x1="16" y1="34" x2="18" y2="34"/><line class="cls-1" x1="20" y1="34" x2="22" y2="34"/><line class="cls-1" x1="42" y1="34" x2="44" y2="34"/><line class="cls-1" x1="46" y1="34" x2="48" y2="34"/><line class="cls-1" x1="15" y1="31" x2="17" y2="31"/><line class="cls-1" x1="19" y1="31" x2="21" y2="31"/><line class="cls-1" x1="23" y1="31" x2="25" y2="31"/><line class="cls-1" x1="27" y1="31" x2="29" y2="31"/><line class="cls-1" x1="31" y1="31" x2="33" y2="31"/><line class="cls-1" x1="35" y1="31" x2="37" y2="31"/><line class="cls-1" x1="39" y1="31" x2="41" y2="31"/><line class="cls-1" x1="43" y1="31" x2="45" y2="31"/><line class="cls-1" x1="47" y1="31" x2="49" y2="31"/><line class="cls-1" x1="49" y1="28" x2="55" y2="28"/><line class="cls-1" x1="51" y1="31" x2="55" y2="31"/><line class="cls-1" x1="9" y1="31" x2="13" y2="31"/><line class="cls-1" x1="9" y1="34" x2="14" y2="34"/><line class="cls-1" x1="50" y1="34" x2="55" y2="34"/></g></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  

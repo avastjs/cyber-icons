@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import convertCode from './templates/react';
+import convertReact from './templates/react';
+import convertVue from './templates/vue';
 import { categories } from './util';
 
 export const toCamelCase = (name: string) => {
@@ -42,13 +43,23 @@ const compile = (type: string) => {
   const generateCode = (svgFilePath: string, category: string) => {
     const content = fs.readFileSync(svgFilePath, { encoding: "utf8" });
     const fileName = path.basename(svgFilePath, '.svg');
-    const extname = type === 'svg' ? '.ts' : '.tsx';
+
+    let extname = '.ts'
+    if (type === 'vue') {
+      extname = '.vue'
+    } else if (type === 'react') {
+      extname = '.tsx'
+    }
 
     const iconsDirCategory = path.resolve(__dirname, `../packages/${type}/src/icons`, category);
     if (!fs.existsSync(iconsDirCategory)) {
       fs.mkdirSync(iconsDirCategory);
     }
-    fs.writeFileSync(path.join(iconsDirCategory, `${toCamelCase(fileName)}${extname}`), convertCode(fileName, content), { encoding: "utf8" });
+    if (type === 'react') {
+      fs.writeFileSync(path.join(iconsDirCategory, `${toCamelCase(fileName)}${extname}`), convertReact(fileName, content), { encoding: "utf8" });
+    } else if (type === 'vue') {
+      fs.writeFileSync(path.join(iconsDirCategory, `${toCamelCase(fileName)}${extname}`), convertVue(fileName, content), { encoding: "utf8" });
+    }
   };
 
   const exportCodeIntoMapFile = () => {
@@ -65,8 +76,18 @@ const compile = (type: string) => {
       files.forEach(file => {
         const name = path.basename(file.name, path.extname(file.name));
         if (name !== 'index') {
-          fileContent += `export {default as ${name}} from './icons/${category}/${name}';\n`
-          fileLocalContent += `export {default as ${name}} from './${name}';\n`
+          if (type === 'react') {
+            fileContent += `export {default as ${name}} from './icons/${category}/${name}';\n`
+          } else if (type === 'vue') {
+
+            fileContent += `export {default as ${name}} from './icons/${category}/${name}.vue';\n`
+          }
+
+          if (type === 'react') {
+            fileLocalContent += `export {default as ${name}} from './${name}';\n`
+          } else if (type === 'vue') {
+            fileLocalContent += `export {default as ${name}} from './${name}.vue';\n`
+          }
 
           if (!filesByCategoryContent[category]) {
             filesByCategoryContent[category] = []
@@ -93,4 +114,5 @@ traverseFiles(svgSourcePath);
 
 
 compile('react');
+compile('vue');
 

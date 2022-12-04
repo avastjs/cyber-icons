@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-2{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-3{fill:{{primary ? primary : colors[theme].primary}};}</svg:style> </defs><g id="system-file-manager"><polygon class="cls-1" points="20.56 50 27.56 22 59.52 22 53.39 50 20.56 50"/><polygon class="cls-2" points="52 12 52 20 26 20 18 52 14 52 8 46 8 33 2 30 2 20 6 18 6 6 8 2 24 2 26 6 46 6 52 12"/><polygon class="cls-3" points="14.83 50 10 45.17 10 31.76 4 28.76 4 21.24 8 19.24 8 6.47 9.24 4 22.76 4 24.76 8 45.17 8 50 12.83 50 18 24.44 18 16.44 50 14.83 50"/><line class="cls-2" x1="6" y1="18" x2="6" y2="28"/><line class="cls-2" x1="6" y1="40" x2="2" y2="38"/><line class="cls-2" x1="6" y1="36" x2="2" y2="34"/><line class="cls-2" x1="6" y1="44" x2="2" y2="42"/><line class="cls-2" x1="28" y1="4" x2="27" y2="2"/><line class="cls-2" x1="31" y1="4" x2="30" y2="2"/><line class="cls-2" x1="34" y1="4" x2="33" y2="2"/><path class="cls-3" d="M59.37,38.1,62,40.27l-2,3.46-3-1.1-.26-.1a8.9,8.9,0,0,1-3.62,2.1L52.61,48h-4l-.56-3.37a8.9,8.9,0,0,1-3.62-2.1l-3.21,1.2-2-3.46,2.63-2.17a9.31,9.31,0,0,1,0-4.2l-2.63-2.17,2-3.46,3.21,1.2a8.9,8.9,0,0,1,3.62-2.1L48.61,24h4l.56,3.37a8.9,8.9,0,0,1,3.62,2.1L60,28.27l.14.24L62,31.73,59.37,33.9a9.31,9.31,0,0,1,0,4.2Z"/><line class="cls-2" x1="37" y1="4" x2="36" y2="2"/><line class="cls-2" x1="40" y1="4" x2="39" y2="2"/><line class="cls-2" x1="43" y1="4" x2="42" y2="2"/><circle class="cls-1" cx="50.61" cy="36" r="5"/><circle class="cls-2" cx="50.61" cy="36" r="5"/><path class="cls-2" d="M59.37,38.1,62,40.27l-2,3.46-3-1.1-.26-.1a8.9,8.9,0,0,1-3.62,2.1L52.61,48h-4l-.56-3.37a8.9,8.9,0,0,1-3.62-2.1l-3.21,1.2-2-3.46,2.63-2.17a9.31,9.31,0,0,1,0-4.2l-2.63-2.17,2-3.46,3.21,1.2a8.9,8.9,0,0,1,3.62-2.1L48.61,24h4l.56,3.37a8.9,8.9,0,0,1,3.62,2.1L60,28.27l.14.24L62,31.73,59.37,33.9a9.31,9.31,0,0,1,0,4.2Z"/><path class="cls-2" d="M62,20l-1.86,8.51L60,28.27l-3.21,1.2a8.9,8.9,0,0,0-3.62-2.1L52.61,24h-4l-.56,3.37a8.9,8.9,0,0,0-3.62,2.1l-3.21-1.2-2,3.46,2.63,2.17a9.31,9.31,0,0,0,0,4.2l-2.63,2.17,2,3.46,3.21-1.2a8.9,8.9,0,0,0,3.62,2.1L48.61,48h4l.56-3.37a8.9,8.9,0,0,0,3.62-2.1l.26.1L55,52H18l8-32Z"/><line class="cls-2" x1="12" y1="12" x2="32" y2="12"/><circle class="cls-1" cx="5" cy="59" r="3"/><circle class="cls-2" cx="5" cy="59" r="3"/><polyline class="cls-2" points="8 59 28 59 32 55 32 40 36 36 39.61 36"/></g></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  

@@ -1,0 +1,15 @@
+export {default as ApplicationXExecutable} from './ApplicationXExecutable.vue';
+export {default as AudioXGeneric} from './AudioXGeneric.vue';
+export {default as FontXGeneric} from './FontXGeneric.vue';
+export {default as ImageXGeneric} from './ImageXGeneric.vue';
+export {default as PackageXGeneric} from './PackageXGeneric.vue';
+export {default as TextHtml} from './TextHtml.vue';
+export {default as TextXGeneric} from './TextXGeneric.vue';
+export {default as TextXGenericTemplate} from './TextXGenericTemplate.vue';
+export {default as TextXScript} from './TextXScript.vue';
+export {default as VideoXGeneric} from './VideoXGeneric.vue';
+export {default as XOfficeAddressBook} from './XOfficeAddressBook.vue';
+export {default as XOfficeCalendar} from './XOfficeCalendar.vue';
+export {default as XOfficeDocument} from './XOfficeDocument.vue';
+export {default as XOfficePresentation} from './XOfficePresentation.vue';
+export {default as XOfficeSpreadsheet} from './XOfficeSpreadsheet.vue';

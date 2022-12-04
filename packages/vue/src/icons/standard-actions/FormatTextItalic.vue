@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-2{fill:{{primary ? primary : colors[theme].primary}};}.cls-3{fill:{{secondary ? secondary : colors[theme].secondary}};}</svg:style> </defs><g id="format-text-italic"><polygon class="cls-1" points="57 12 57 62 17 62 7 52 7 2 47 2 57 12"/><polygon class="cls-2" points="17.83 60 9 51.17 9 4 46.17 4 55 12.83 55 60 17.83 60"/><polygon class="cls-1" points="45 18 22 18 23 12 46 12 45 18"/><polygon class="cls-3" points="24.36 16 24.69 14 43.64 14 43.31 16 24.36 16"/><polygon class="cls-1" points="41 52 18 52 19 46 42 46 41 52"/><polygon class="cls-3" points="20.36 50 20.69 48 39.64 48 39.31 50 20.36 50"/><polygon class="cls-1" points="26 46 32 18 38 18 32 46 26 46"/><polygon class="cls-3" points="28.47 44 33.62 20 35.53 20 30.38 44 28.47 44"/></g></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  
