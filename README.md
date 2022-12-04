@@ -30,7 +30,7 @@
 
 <image width="600px" src="ss1.png" />
 
-Demo: https://react-cyber-icons-demo.vercel.app/
+Demo: https://cyber-icons-demo.vercel.app/
 
 <hr />
 
