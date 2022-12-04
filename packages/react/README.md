@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<image width="100px" src="../../logo.svg" />
+<image width="100px" src="logo.svg" />
 +280 Free SVG cyberpunk icons. Contributions, corrections & requests can be made on GitHub.
 
 
@@ -26,7 +26,7 @@
   </a>
 </p>
 
-<image width="100%" src="../../ss1.png" />
+<image width="100%" src="ss1.png" />
 
 Demo: https://cyber-icons-demo.vercel.app/
 
@@ -43,7 +43,7 @@ Demo: https://cyber-icons-demo.vercel.app/
 
 ## React
 
-<image width="80px" src="../../react-min.png" />
+<image width="80px" src="react-min.png" />
 
 https://www.npmjs.com/package/@vastjs/cyber-icons-react
 
@@ -94,7 +94,7 @@ export default function Home() {
   <ApplicationsEngineering theme="spacex" />
 ```
 
-<image width="600px" src="../../themes.png" />
+<image width="600px" src="themes.png" />
 
 ### Custom Color
 
@@ -103,7 +103,7 @@ export default function Home() {
   <ApplicationsEngineering primary="#f50a0a" secondary="#f0e5e5" border="#fbff00" />
 ```
 
-<image width="100px" src="../../custom.png" />
+<image width="100px" src="custom.png" />
 
 
 ### Size

@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<image width="100px" src="../../logo.svg" />
+<image width="100px" src="logo.svg" />
 
 +280 Free SVG cyberpunk icons. Contributions, corrections & requests can be made on GitHub.
 
@@ -27,7 +27,7 @@
   </a>
 </p>
 
-<image width="600px" src="../../ss1.png" />
+<image width="600px" src="ss1.png" />
 
 Demo: https://cyber-icons-demo.vercel.app/
 
@@ -44,7 +44,7 @@ Demo: https://cyber-icons-demo.vercel.app/
 
 ## Vue
 
-<image width="80px" src="../../vue-min.png" />
+<image width="80px" src="vue-min.png" />
 
 https://www.npmjs.com/package/@vastjs/cyber-icons-vue
 
@@ -120,7 +120,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   <ApplicationsEngineering theme="spacex" />
 ```
 
-<image width="100%" src="../../themes.png" />
+<image width="100%" src="themes.png" />
 
 ### Custom Color
 
@@ -129,7 +129,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   <ApplicationsEngineering primary="#f50a0a" secondary="#f0e5e5" border="#fbff00" />
 ```
 
-<image width="100px" src="../../custom.png" />
+<image width="100px" src="custom.png" />
 
 
 ### Size
