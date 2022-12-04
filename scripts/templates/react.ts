@@ -85,7 +85,7 @@ function processStyle(svg: string, rx = /\.cls-\d\{(.[^\}]*)\}/gm) {
     .replace("<svg", "<svg onClick={onClick} className={className} height={size} width={size}")
 
   // replace stroke
-  const svgStrokeReplaced = svgColorsReplaced.replaceAll(/strokeWidth:(.*px`)/g, function(a, b) {
+  const svgStrokeReplaced = svgColorsReplaced.replaceAll(/strokeWidth:(`\d+px`)/g, function(a, b) {
     return 'strokeWidth: `${stroke}`';
   })
 
