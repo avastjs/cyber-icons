@@ -5,8 +5,9 @@ const toSmallCamelCase = (name: string) => {
   return formatted.charAt(0).toLowerCase() + formatted.substring(1);
 }
 
-function processStyle(svg: string) {
-  let rx = /\.cls-\d\{(.[^\}]*)\}/gm;
+function processStyle(svg: string, rx = /\.cls-\d\{(.[^\}]*)\}/gm) {
+  const classesName: any = {}
+
   let match = rx.exec(svg);
   let svgProccessed = svg
 
@@ -21,14 +22,59 @@ function processStyle(svg: string) {
         style += `${toSmallCamelCase(matchValues[1])}:\`${matchValues[2]}\`,`
         matchValues = rxValues.exec(match[1]);
       }
+
+      console.log('style:', className[1], match[1])
+
       style = style.substring(0, style.length - 1)
 
-      svgProccessed = svgProccessed.replaceAll(`class="${className[1]}"`, `style={{${style}}}`)
+      if (classesName[className[1]]) {
+        classesName[className[1]] = [...classesName[className[1]], style]
+      } else {
+        classesName[className[1]] = [style]
+      }
+ 
 
       match = rx.exec(svg);
     }
   }
 
+  // multiple classes
+  const rxExtra = /\.cls-\d,.[^\}]*\{(.[^\}]*)\}/gm
+  let matchExtra = rxExtra.exec(svgProccessed);
+
+  while (matchExtra != null) {
+    console.log('test:', matchExtra[0])
+    const className = /\.(cls-\d)/gm.exec(matchExtra[0])
+
+    if (className) {
+      let rxValues = /([^:]*):([^:]*);/gm;
+      let matchValues = rxValues.exec(matchExtra[1]);
+
+      let style = ''
+      while (matchValues != null) {
+        style += `${toSmallCamelCase(matchValues[1])}:\`${matchValues[2]}\`,`
+        matchValues = rxValues.exec(matchExtra[1]);
+      }
+      style = style.substring(0, style.length - 1)
+
+      if (classesName[className[1]]) {
+        classesName[className[1]] = [...classesName[className[1]], style]
+      } else {
+        classesName[className[1]] = [style]
+      }
+    }
+    matchExtra = rxExtra.exec(svgProccessed);
+  }
+
+  // inject class style
+
+  console.log('classNa', classesName)
+  Object.keys(classesName).forEach(key => {
+    const styles = classesName[key].join(',')
+    svgProccessed = svgProccessed.replaceAll(`class="${key}"`, `style={{${styles}}}`)
+  })
+  //
+  //console.log('css process', svgProccessed)
 
   // replace style
   const svgStyleReplaced = svgProccessed.replace(/<style>(.*)<\/style>/g, function(a, b) {
@@ -48,6 +94,7 @@ function processStyle(svg: string) {
   const svgStrokeReplaced = svgColorsReplaced.replaceAll(/strokeWidth:(.*px`)/g, function(a, b) {
     return 'strokeWidth: `${stroke}`';
   })
+  //console.log('result:', svgColorsReplaced)
 
   return svgColorsReplaced;
 }

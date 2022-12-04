@@ -1,4 +1,4 @@
-export let colors: Record<string, {primary: string, secondary: string, border: string}> = {
+export let colors: Record<string, { primary: string, secondary: string, border: string }> = {
   default: {
     primary: '#ffffff',
     secondary: '#b0acb0',
@@ -46,7 +46,12 @@ export let colors: Record<string, {primary: string, secondary: string, border: s
   }
 }
 
-export const categories = ['standard-actions', 'standard-application', 'standard-categories', 'standard-device']
+export const categories = [
+  'standard-actions', 'standard-application', 'standard-categories', 'standard-device', 'standard-places',
+  'mime', 'emoticons'
+
+]
+// export const categories = ['standard-categories']
 
 export const ICON_SIZE = '24px'
 
