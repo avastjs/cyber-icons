@@ -1,5 +1,5 @@
 {
-  "name": "cyber-icons-react",
+  "name": "@vastjs/cyber-icons-react",
   "version": "1.0.1",
   "description": "",
   "main": "./lib/cjs/index.js",
