@@ -108,10 +108,7 @@ const compile = (type: string) => {
   exportCodeIntoMapFile();
 };
 
-
-
 traverseFiles(svgSourcePath);
-
 
 compile('react');
 compile('vue');

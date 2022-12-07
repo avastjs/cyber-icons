@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" id="battery-caution" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-2{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-3{fill:{{primary ? primary : colors[theme].primary}};}</svg:style> </defs><rect class="cls-1" x="24" y="44" width="32" height="16"/><path class="cls-1" d="M58,46h2c1.1,0,2,.9,2,2v8c0,1.1-.9,2-2,2h-2v-12h0Z"/><rect class="cls-3" x="34" y="46" width="4" height="12"/><rect class="cls-3" x="26" y="46" width="4" height="12"/><path class="cls-2" d="M58,46h2c1.1,0,2,.9,2,2v8c0,1.1-.9,2-2,2h-2v-12h0Z"/><rect class="cls-2" x="34" y="46" width="4" height="12"/><rect class="cls-2" x="26" y="46" width="4" height="12"/><rect class="cls-2" x="22" y="42" width="36" height="20" rx="2" ry="2"/><path class="cls-2" d="M58,12V44c0-1.1-.9-2-2-2H24c-1.1,0-2,.9-2,2v14H14l-6-6v-13l-6-3V20l4-2V6l2-4H24l2,4h26l6,6Z"/><path class="cls-3" d="M14.83,56l-4.83-4.83v-13.41l-6-3v-13.53l4-2V6.47l1.24-2.47h13.53l2,4h26.41l4.83,4.83v27.17H24c-2.21,0-4,1.79-4,4v12h-5.17Z"/><line class="cls-2" x1="6" y1="18" x2="6" y2="34"/><line class="cls-2" x1="26" y1="6" x2="12" y2="6"/><path class="cls-2" d="M30.34,14.46l-13.78,20.42c-.9,1.33,.06,3.12,1.66,3.12h27.57c1.6,0,2.55-1.79,1.66-3.12l-13.78-20.42c-.79-1.17-2.52-1.17-3.32,0Z"/><polygon class="cls-1" points="18.22 36 32 15.58 45.78 36 18.22 36"/><line class="cls-2" x1="32" y1="29" x2="32" y2="20"/><line class="cls-2" x1="32" y1="34" x2="32" y2="32"/></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  

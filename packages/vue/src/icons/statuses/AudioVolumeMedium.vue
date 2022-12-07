@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" id="audio-volume-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-2{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-3{fill:{{primary ? primary : colors[theme].primary}};}</svg:style> </defs><polyline class="cls-2" points="12 62 2 62 2 52"/><polyline class="cls-2" points="62 52 62 62 52 62"/><polyline class="cls-2" points="52 2 62 2 62 12"/><polyline class="cls-2" points="2 12 2 2 12 2"/><path class="cls-1" d="M12,26h4v12h-4c-1.1,0-2-.9-2-2v-8c0-1.1,.9-2,2-2Z"/><path class="cls-1" d="M42,32c0,3.31-2.69,6-6,6v-12c3.31,0,6,2.69,6,6Z"/><path class="cls-2" d="M12,26h4v12h-4c-1.1,0-2-.9-2-2v-8c0-1.1,.9-2,2-2Z"/><polygon class="cls-2" points="36 16 36 48 16 38 16 26 36 16"/><polygon class="cls-3" points="18 36.76 18 27.24 34 19.24 34 44.76 18 36.76"/><path class="cls-2" d="M45.9,22.1c2.53,2.54,4.1,6.04,4.1,9.9s-1.57,7.36-4.1,9.9"/><path class="cls-2" d="M43.07,24.93c1.81,1.81,2.93,4.31,2.93,7.07s-1.12,5.26-2.93,7.07"/><path class="cls-2" d="M42,32c0,3.31-2.69,6-6,6v-12c3.31,0,6,2.69,6,6Z"/></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  

@@ -48,10 +48,8 @@ export let colors: Record<string, { primary: string, secondary: string, border: 
 
 export const categories = [
   'standard-actions', 'standard-application', 'standard-categories', 'standard-device', 'standard-places',
-  'mime', 'emoticons'
-
+  'mime', 'emoticons', 'statuses'
 ]
-// export const categories = ['standard-categories']
 
 export const ICON_SIZE = '24px'
 

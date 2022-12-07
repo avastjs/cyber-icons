@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" id="mail-signed-verified" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-2{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-3{fill:{{primary ? primary : colors[theme].primary}};}</svg:style> </defs><polygon class="cls-2" points="62 22 62 52 47.67 52 45 50 29 50 26.33 52 12 52 12 22 37 40 62 22"/><polygon class="cls-3" points="48.34 50 45.67 48 28.33 48 25.66 50 14 50 14 25.9 37 42.46 60 25.9 60 50 48.34 50"/><polygon class="cls-2" points="62 22 37 40 12 22 62 22"/><polygon class="cls-2" points="62 22 37 40 12 22 62 22"/><polygon class="cls-3" points="18.2 24 55.8 24 37 37.54 18.2 24"/><rect class="cls-1" x="2" y="12" width="20" height="20"/><rect class="cls-2" x="2" y="12" width="20" height="20"/><g><path class="cls-2" d="M10.55,29.13s12.12-9.99,7.48-12.53c-4.24-2.32-5.19,10.46-.97,10.46"/><polyline class="cls-2" points="4.91 17.87 6.91 20.87 11.91 14.87"/></g></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  
