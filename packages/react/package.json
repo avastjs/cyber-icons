@@ -1,6 +1,6 @@
 {
   "name": "@vastjs/cyber-icons-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
