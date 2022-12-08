@@ -1,0 +1,24 @@
+
+  <template>
+		<svg :class="className" :height="size" :width="size" id="user-trash-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><svg:style type="text/css">.cls-1{fill:{{secondary ? secondary : colors[theme].secondary}};}.cls-2{fill:none;stroke:{{border ? border : colors[theme].border}};stroke-linejoin:bevel;stroke-width:{{stroke}};}.cls-3{fill:{{primary ? primary : colors[theme].primary}};}</svg:style> </defs><polygon class="cls-2" points="56 20 50 62 41 62 39 59 25 59 23 62 14 62 8 20 56 20"/><polygon class="cls-3" points="42.07 60 40.07 57 23.93 57 21.93 60 15.73 60 10.31 22 53.69 22 48.27 60 42.07 60"/><polygon class="cls-2" points="62 14 62 20 36.48 20 36.27 19.86 35.87 20 2 20 2 14 62 14"/><polygon class="cls-2" points="36.48 20 35.87 20 36.27 19.86 36.48 20"/><rect class="cls-1" x="31" y="-11" width="2" height="56" transform="translate(49 -15) rotate(90)"/><rect class="cls-1" x="30" y="27" width="4" height="26"/><rect class="cls-1" x="40" y="27" width="4" height="26"/><rect class="cls-1" x="20" y="27" width="4" height="26" transform="translate(44 80) rotate(-180)"/><rect class="cls-2" x="30" y="27" width="4" height="26"/><rect class="cls-2" x="40" y="27" width="4" height="26"/><rect class="cls-2" x="20" y="27" width="4" height="26" transform="translate(44 80) rotate(-180)"/><polygon class="cls-3" points="52.06 10.95 50.03 14 30.62 14 35.66 6.43 38.61 2 52.06 10.95"/><polygon class="cls-3" points="22.57 14 13.31 14 13.92 8.96 21.09 9.83 22.57 14"/><path class="cls-1" d="M35.66,6.43l-5.04,7.57h-8.05l-1.48-4.17-.55-1.54,2.97-1.06,2.49,3.77,2.17-5.42,.51-.18c2.44-.87,5.03-.4,6.98,1.03Z"/><polygon class="cls-2" points="52.06 10.95 50.03 14 30.62 14 35.66 6.43 38.61 2 52.06 10.95"/><polygon class="cls-2" points="22.57 14 13.31 14 13.92 8.96 21.09 9.83 22.57 14"/><path class="cls-2" d="M35.66,6.43l-5.04,7.57h-8.05l-1.48-4.17-.55-1.54,2.97-1.06,2.49,3.77,2.17-5.42,.51-.18c2.44-.87,5.03-.4,6.98,1.03Z"/></svg>
+  </template>
+  <script lang="ts" setup>
+    import { colors } from '../../util';
+
+    withDefaults(defineProps<{
+        theme?: string;
+        size?: number | string;
+        primary?: string;
+        secondary?: string;
+        border?: string;
+        stroke?: string;
+        className?: string;
+      }>(), {
+       theme : 'default',
+        size : '24px',
+        stroke: "1px",
+        className: '',
+    })
+  </script>
+
+  
